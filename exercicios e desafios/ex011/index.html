@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinámica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+
+    <picture><!--Essa tag permite que vc crie varias fontes, os comandos servem para dizer que se chegar no limite do max-width a imagem vai mudar-->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo Audio</h1>
+    <p>Vamos aprender a reproduzir audios em HTML5.</p>
+    <audio src="midia/free Beat Trap Com Grave.mp3" controls></audio> <!-- MP3 WAV OGG-->
+
+    <h1>Outras formas de colocar o comando para audios:</h1>
+    <p><small>(Leia o comando)</small></p>
+
+    <p>Existe essa forma:  <br><audio preload="metadata" autoplay controls loop> <!--O navegador vai tentar carregar esses 3 arquivos, caso nenhum deles der certo, você pode colocar uma mensagem dizendo que não foi possivel mostar os audios e que o usuario do site pode fazer o download do audio.
+    O parametro auto é perigoso porque ele vai considerar que o site terminou de carregar depois que vc carregar todo o audio. O metadata vai carregar as informações do arquivo, como a data, nome do arquivo, data e duração, e o none nao vai carregar nada, so quando o usuario apertar play no controle. 
+    O Parametro autoplay é para tocar o audio automaticamente, porem tem alguns navegadores que não funciona o autoplay
+    O control serve para aparecer o botão de play.
+    O loop serve para fazer um loop no audio e ficar repetindo.
+    TENTA EVITAR ARQUIVO WAV PORQUE O ARQUIVO É PESADO, USA MP3 E OGG  -->
+        <source src="midia/free Beat Trap Com Grave.mp3" type="audio/mpeg">
+        <source src="midia/free Beat Trap Com Grave.mp3" type="audio/ogg">
+        <source src="midia/free Beat Trap Com Grave.mp3" type="audio/wav">
+    </audio></p>
+    <style>
+        body{
+            background-image: linear-gradient(45deg, rgb(18, 196, 18), rgb(55, 6, 217));
+        }
+    </style>
+</body>
+</html>
